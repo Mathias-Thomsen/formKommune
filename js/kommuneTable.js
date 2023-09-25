@@ -5,6 +5,7 @@ const pbCreateKommuneTable = document.getElementById("pdGetKommuner")
 const tblKommuner = document.getElementById("tblKommuner")
 
 
+
 function fetchAnyUrl(url) {
     return fetch(url).then(response => response.json());
 }
@@ -35,10 +36,10 @@ function createTable(kommune) {
     cell.innerHTML = kommune.region.navn
     cell.style.width = "10%"
 
-
     const pbDelete = document.createElement("input");
     pbDelete.type = "button";
     pbDelete.setAttribute("value", "Slet kommune");
+    row.appendChild(pbDelete)
 
     console.log("hej")
 
